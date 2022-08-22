@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .cont {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #calc-input {
+                font-size: 52px;
+                width: 430px;
+                height: 150px;
+                border-radius: 25px;
+                border: none;
+                margin: 25px;
+                overflow-x: scroll;
+                padding: 2px;
+                text-align: right;
+                background: linear-gradient(145deg, #cacaca, #f0f0f0);
+                box-shadow: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+            }
+
+            #row-zero, #row-one, #row-two, #row-three, #row-four {
+                display: flex;
+                flex-direction: row;
+            }
+            #zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #times, #divide, #bs, #ac, #plus, #minus, #equals, #dot, #equals {
+                height: 100px;
+                width: 100px;
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+                border: none;
+                background: linear-gradient(135deg, #ffffff, #e6e6e6);
+                box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+            }
+
+            #row-ult {
+                display: flex;
+            }
+
+            #zero {
+                width: 200px;
+                justify-content: center;
+                padding: 25px;
+            }
+
+            #equals {
+                height: 200px;
+                background: linear-gradient(145deg, #e69500, #ffb100);
+            }
+            .calc {
+                height: 770px;
+                width: 450px;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+                border: none;
+                background: linear-gradient(145deg, #e6e6e6, #ffffff);
+                box-shadow:  12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);              
+            }
+
+            #name {
+                font-weight: bold;
+                margin-right: 250px;
+                font-size: 1.4em;
+            }
+
+            #name::selection {
+                color: white;
+                text-decoration: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Trying out neomorphism-->
+        <div class="cont">
+            <div class="calc">
+                <p id="name">CALCULATOR</p>
+                <input id="calc-input"></input>
+                <div id="row-zero">
+                    <button id="ac" onmousedown="clickEffect('ac')" onmouseup="unclickEffect('ac')"><span style="font-size: 30px; color: #FFA500">AC</span></button>
+                    <button id="divide" onmousedown="clickEffect('divide')" onmouseup="unclickEffect('divide')"><span style="font-size: 50px; color: #FFA500">÷</span></button>
+                    <button id="times" onmousedown="clickEffect('times')" onmouseup="unclickEffect('times')"><span style="font-size: 50px; color: #FFA500">×</span></button>
+                    <button id="bs" onmousedown="clickEffect('bs')" onmouseup="unclickEffect('bs')"><span style="font-size: 50px; color: #FFA500">⌫</span></button>
+                </div>
+                <div id="row-one">
+                    <button id="seven" onmousedown="clickEffect('seven')" onmouseup="unclickEffect('seven')"><span style="font-size: 50px;">7</span></button>
+                    <button id="eight" onmousedown="clickEffect('eight')" onmouseup="unclickEffect('eight')"><span style="font-size: 50px;">8</span></button>
+                    <button id="nine" onmousedown="clickEffect('nine')" onmouseup="unclickEffect('nine')"><span style="font-size: 50px;">9</span></button>
+                    <button id="minus" onmousedown="clickEffect('minus')" onmouseup="unclickEffect('minus')"><span style="font-size: 50px; color: #FFA500">-</span></button>
+                </div>
+                <div id="row-two">
+                    <button id="four" onmousedown="clickEffect('four')" onmouseup="unclickEffect('four')"><span style="font-size: 50px;">4</span></button>
+                    <button id="five" onmousedown="clickEffect('five')" onmouseup="unclickEffect('five')"><span style="font-size: 50px;">5</span></button>
+                    <button id="six" onmousedown="clickEffect('six')" onmouseup="unclickEffect('six')"><span style="font-size: 50px;">6</span></button>
+                    <button id="plus" onmousedown="clickEffect('plus')" onmouseup="unclickEffect('plus')"><span style="font-size: 50px; color: #FFA500">+</span></button>
+                </div>
+                <div id="row-ult">
+                    <div id="row-ult-one">
+                        <div id="row-three">
+                            <button id="one" onmousedown="clickEffect('one')" onmouseup="unclickEffect('one')"><span style="font-size: 50px;">1</span></button>
+                            <button id="two" onmousedown="clickEffect('two')" onmouseup="unclickEffect('two')"><span style="font-size: 50px;">2</span></button>
+                            <button id="three" onmousedown="clickEffect('three')" onmouseup="unclickEffect('three')"><span style="font-size: 50px;">3</span></button>
+                        </div>
+                        <div id="row-four">
+                            <button id="zero" onmousedown="clickEffect('zero')" onmouseup="unclickEffect('zero')"><span style="font-size: 50px;">0</span></button>
+                            <button id="dot" onmousedown="clickEffect('dot')" onmouseup="unclickEffect('dot')"><span style="font-size: 50px;">.</span></button>
+                        </div>
+                    </div>
+                    <button id="equals" onmousedown="clickEffect('equals')" onmouseup="unclickEffect('equals')"><span style="font-size: 50px; color: #ffffff">=</span></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            var numbers = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'plus': '+', 'minus': '-', 'divide': '÷', 'times': '×'}
+            function clickEffect(id_) {
+                console.log(id_+" pressed!");
+                document.getElementById(id_).style.background = 'linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25))'//'linear-gradient(145deg, #cacaca, #f0f0f0)';
+                document.getElementById(id_).style['box-shadow'] = '20px 20px 60px #bebebe, -20px -20px 60px #ffffff';
+            };
+
+            function unclickEffect(id_) {
+                console.log(id_+" released!");
+                document.getElementById(id_).style.background = 'linear-gradient(145deg, #ffffff, #e6e6e6)';
+                document.getElementById(id_).style['box-shadow'] = '12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3)';
+                if (id_ == "bs") {
+                    document.getElementById("calc-input").value = document.getElementById("calc-input").value.substring(0, document.getElementById("calc-input").value.length-1);
+                }
+                else if (id_ == "ac") {
+                    document.getElementById("calc-input").value = "";
+                }
+                else if (id_ == "equals") {
+                    document.getElementById("calc-input").value = eval(document.getElementById("calc-input").value.replace("÷", "/").replace("×", "*"));
+                }
+                else {
+                    document.getElementById("calc-input").value += numbers[id_];
+                }
+            };
+        </script>
+    </body>
+</html>
