@@ -43,7 +43,7 @@ Talking about databases, you need them to store information from your website. W
 
 
 ## YouTube
-Show me a programmer that learns from watching the right YouTube videos and I will show you a programmer that understands how to solve problems with coding. Learning from books is good, but when you see that code getting written and seeing how it works gives you the experience you need. I will share a few links to great YouTube channels where you can learn web development.
+Show me a programmer that learns from watching the right YouTube videos and I will show you a programmer that understands how to solve problems with coding. Learning from books is good, but when you see that code getting written and seeing how it works, gives you the experience you need. I will share a few links to great YouTube channels where you can learn web development.
 
 1. [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp/videos)
 2. [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
